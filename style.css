@@ -1,0 +1,54 @@
+/*
+강도 순서
+ id > class > tag
+ */
+
+
+body {
+  margin: 0;
+}
+a {
+  color:black;
+  text-decoration: none;
+}
+h1 {
+  font-size:60px;
+  text-align: center;
+  border-bottom: 2px solid gray;
+  margin:0;
+  padding: 20px;
+}
+ol {
+  border-right: 2px solid gray;
+  width:100px;
+  margin:0;
+  padding:20px;
+}
+#grid ol{
+  padding-left: 33px;
+}
+#active {       /* id 선택자 */
+  color:red;
+}
+.saw {         /* class 선택자 */
+  color:gray;
+}
+#grid {
+  display:grid;
+  grid-template-columns: 150px 1fr;
+}
+#article {
+  padding-left: 25px;
+}
+@media(max-width:800px) {
+  #grid {
+    display: block;
+  }
+  ol {
+    border-right:none;
+    height: auto;
+    width:100px;
+    margin:0;
+    padding:20px;
+  }
+}

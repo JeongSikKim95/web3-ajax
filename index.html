@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="color.js"></script>
+    <title>WEB1 - html</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+  </head>
+  <body>
+      <h1><a href="index.html">WEB</a>
+        <input id="night_day" type="button" value="night" onclick="
+          nightDayHandler(this);
+        ">
+
+      </h1>
+      <ol>
+        <li><a onclick="
+            document.querySelector('article').innerHTML = '<h2>HTML</h2>HTML is...';
+          ">HTML</a></li>
+        <li><a onclick="
+            document.querySelector('article').innerHTML = '<h2>HTML</h2>CSS is...';
+          ">CSS</a></li>
+        <li><a onclick="
+            document.querySelector('article').innerHTML = '<h2>HTML</h2>JavaScript is...';
+          ">JavaScript</a></li>
+      </ol>
+      <article>
+
+      </article>
+  </body>
+</html>

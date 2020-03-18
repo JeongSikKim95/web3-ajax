@@ -10,16 +10,14 @@
 </head>
 
 <body>
-  <h1><a href="index.html">WEB</a>
+  <h1><a href="#!welcome">WEB</a>
     <input id="night_day" type="button" value="night" onclick="
           nightDayHandler(this);
         ">
 
   </h1>
-  <ol>
-    <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
-    <li><a href="#!css" onclick="fetchPage('css');">CSS</a></li>
-    <li><a href="#!javaScript" onclick="fetchPage('javaScript');">JavaScript</a></li>
+  <ol id="nav">
+
   </ol>
   <article>
 
@@ -41,6 +39,12 @@
     } else{
       fetchPage('welcome');
     }
+
+    fetch('list').then(function (response) {
+        response.text().then(function (text) {
+          document.querySelector('#nav').innerHTML = text;
+        })
+      })
   </script>
 </body>
 

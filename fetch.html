@@ -14,13 +14,11 @@
         })
       })
       */
-
       fetch('ajax').then(function(response){
         if(response.status == '404') {
           alert('Not found');
         }
       })
-
       /*
       function callbackme(){
         console.log('response end');
@@ -28,18 +26,14 @@
       fetch('html').then(callbackme);
       console.log(1);
       console.log(2);
-
         //   결과
         //   1
         //   2
         //   response end
-
         //   응답이 끝나야 callbackme가 실행되기 때문
         //   Asynchronous 비동기식 방법
-
         //   response 객체는 fetch를 통해 서버에 요청을 했을 때
         //   서버가 응답한 그 결과를 담고 있는 객체
-
       */
     ">
   </body>

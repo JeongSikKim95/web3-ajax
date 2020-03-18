@@ -18,44 +18,33 @@
   </h1>
   <ol>
     <li><a onclick="
-          fetch('html').then(function(response){
-            if(response.status == '404') {
-              alert('Not found');
-            }
-
-            response.text().then(function(text){
-              document.querySelector('article').innerHTML = text;
-            })
-          })
+            fetchPage('html');
           ">HTML</a></li>
 
     <li><a onclick="
-          fetch('css').then(function(response){
-            if(response.status == '404') {
-              alert('Not found');
-            }
-
-            response.text().then(function(text){
-              document.querySelector('article').innerHTML = text;
-            })
-          })
+            fetchPage('css');
           ">CSS</a></li>
 
     <li><a onclick="
-          fetch('javaScript').then(function(response){
-            if(response.status == '404') {
-              alert('Not found');
-            }
-
-            response.text().then(function(text){
-              document.querySelector('article').innerHTML = text;
-            })
-          })
+          fetchPage('javaScript');
           ">JavaScript</a></li>
   </ol>
   <article>
 
   </article>
+  <script>
+    function fetchPage(name) {
+      fetch(name).then(function (response) {
+        if (response.status == '404') {
+          alert('Not found');
+        }
+
+        response.text().then(function (text) {
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+    }
+  </script>
 </body>
 
 </html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,7 +16,15 @@
       </h1>
       <ol>
         <li><a onclick="
-            document.querySelector('article').innerHTML = '<h2>HTML</h2>HTML is...';
+          fetch('html').then(function(response){
+            if(response.status == '404') {
+              alert('Not found');
+            }
+
+            response.text().then(function(text){
+              document.querySelector('article').innerHTML = text;
+            })
+          })
           ">HTML</a></li>
         <li><a onclick="
             document.querySelector('article').innerHTML = '<h2>HTML</h2>CSS is...';
